@@ -8,7 +8,7 @@
 
 #import "HCViewController.h"
 
-#define IMAGE_WIDTH_SCALE 0.69  //Image size, in % of view size
+#define IMAGE_WIDTH_SCALE 0.69  //Image size (width), in % of view size (width)
 #define TRANSITION_SCALE 0.5    //Pan multiplier
 
 @interface HCViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate> {

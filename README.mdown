@@ -38,14 +38,13 @@ You can customize the image, image title, or image description via a single Prop
 	3. HelpCarouselViewController_iPhone.xib
 	4. HelpCarouselViewController_iPad.xib
 3. Insert the following code at where you would like HelpCarousel to appear.
-
 ```c
     HelpCarouselViewController *helpCarouselViewController;
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        helpCarouselViewController = [[HelpCarouselViewController alloc] initWithNibName:@"HelpCarouselViewController" bundle:nil];
+        helpCarouselViewController = [[HelpCarouselViewController alloc] initWithNibName:@"HCViewController_iPhone" bundle:nil];
     } else if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        helpCarouselViewController = [[HelpCarouselViewController alloc] initWithNibName:@"HelpCarouselViewController_iPad" bundle:nil];
+        helpCarouselViewController = [[HelpCarouselViewController alloc] initWithNibName:@"HCViewController_iPad" bundle:nil];
     }
     
     helpCarouselViewController.view.frame = [UIScreen mainScreen].bounds;
@@ -53,8 +52,6 @@ You can customize the image, image title, or image description via a single Prop
     [self addChildViewController:helpCarouselViewController];
     [helpCarouselViewController didMoveToParentViewController:self];
     [self.view addSubview:helpCarouselViewController.view];
-```
-
 4. Done.
 
 Questions
