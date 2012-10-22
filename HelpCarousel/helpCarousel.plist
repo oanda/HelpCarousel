@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>clickToShowLeftGutter.png</string>
+		<key>imageTitle</key>
+		<string>Expand for More Options</string>
+		<key>imageDescription</key>
+		<string>This is the description for Feature #1.</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>clickOnRatesToExpand.png</string>
+		<key>imageTitle</key>
+		<string>Quick Buy and Sell</string>
+		<key>imageDescription</key>
+		<string>This is the description for Feature #2.</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>clickToShowLeftGutter.png</string>
+		<key>imageTitle</key>
+		<string>This One is Truely Magical</string>
+		<key>imageDescription</key>
+		<string>Click the triple stripe button to show the left Gutter Menu. It shows a list of actions you can perform. 123456789123456789.</string>
+	</dict>
+</array>
+</plist>
