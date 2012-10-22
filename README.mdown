@@ -57,7 +57,7 @@ You can customize the image, image title, or image description via a single Prop
 
 Questions
 ------------------------
-Please feel free to contact me by sending me an <a href="mail-to:info@znli.ca" />email</a>.
+Please feel free to contact me by sending me an [email](mail-to:info@znli.ca).
 
 Image Sources
 -----------------------
