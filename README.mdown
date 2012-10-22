@@ -52,6 +52,7 @@ You can customize the image, image title, or image description via a single Prop
     [self addChildViewController:helpCarouselViewController];
     [helpCarouselViewController didMoveToParentViewController:self];
     [self.view addSubview:helpCarouselViewController.view];
+```
 4. Done.
 
 Questions
