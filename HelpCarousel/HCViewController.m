@@ -26,7 +26,6 @@
 @property (nonatomic, strong) NSString *imagePlistFilePath;
 @property (nonatomic, strong) NSArray *contentArray;
 @property (nonatomic) NSUInteger currentPage;
-@property (weak, nonatomic) IBOutlet UIButton *skipButton;
 @property (nonatomic, strong) UIPanGestureRecognizer *swipeGR;
 
 
@@ -39,10 +38,6 @@
 @synthesize scrollViewPageControl = _scrollViewPageControl;
 @synthesize currentPage = _currentPage;
 @synthesize swipeGR = _swipeGR;
-
-- (IBAction)skipHelp:(UIButton *)sender {
-    return;
-}
 
 //////////////////////////////////////
 //      Delegate Methods
@@ -63,12 +58,6 @@
         lastPage = self.currentPage;
         self.titleLabel.text = [[self.contentArray objectAtIndex:self.currentPage] valueForKey:@"imageTitle"];
         self.detailLabel.text = [[self.contentArray objectAtIndex:self.currentPage] valueForKey:@"imageDescription"];
-        
-        if(self.imageScrollView.contentOffset.x == ([self.contentArray count] - 1) * self.imageScrollView.bounds.size.width) {
-            self.skipButton.enabled = YES;
-        } else {
-            self.skipButton.enabled = NO;
-        }
     }
     
     pageControlBeingUsed = NO;
@@ -247,7 +236,6 @@
 }
 
 - (void)viewDidUnload {
-    [self setSkipButton:nil];
     [super viewDidUnload];
 }
 
