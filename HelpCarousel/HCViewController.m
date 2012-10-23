@@ -83,7 +83,6 @@
     
     if(self.imageScrollView.contentOffset.x == (count - 1) * self.imageScrollView.bounds.size.width) {
         //On the last page
-        [self.imageScrollView addGestureRecognizer:self.swipeGR];
         if(lastScrollViewContentOffset.x < self.imageScrollView.contentOffset.x) {
         }
         self.swipeGR.enabled = YES;
@@ -190,8 +189,13 @@
     }
     
     self.scrollViewPageControl.numberOfPages = count;
-    
     self.imageScrollView.contentSize = CGSizeMake(count * windowWidth, self.imageScrollView.bounds.size.height);
+    
+    if(count == 1) {
+        self.swipeGR.enabled = YES;
+    } else {
+        self.swipeGR.enabled = NO;
+    }
 }
 
 - (NSString *)imagePlistFilePath {
@@ -232,6 +236,7 @@
 {
     [super viewDidLoad];
     [self setupNib];
+    [self.imageScrollView addGestureRecognizer:self.swipeGR];
     [self addImagesFromPlistToScrollView];
 }
 
