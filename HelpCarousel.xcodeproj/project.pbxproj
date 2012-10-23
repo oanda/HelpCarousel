@@ -24,10 +24,6 @@
 		703BA98816359AEC001242B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703BA96016359AEC001242B7 /* Foundation.framework */; };
 		703BA99016359AEC001242B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 703BA98E16359AEC001242B7 /* InfoPlist.strings */; };
 		703BA99316359AEC001242B7 /* HelpCarouselTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 703BA99216359AEC001242B7 /* HelpCarouselTests.m */; };
-		703BA99D16359D9C001242B7 /* helpCarousel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 703BA99C16359D9C001242B7 /* helpCarousel.plist */; };
-		703BA9BF1635A157001242B7 /* image1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 703BA9BE1635A157001242B7 /* image1.jpeg */; };
-		703BA9C21635A261001242B7 /* image2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 703BA9C01635A261001242B7 /* image2.jpeg */; };
-		703BA9C31635A261001242B7 /* image3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 703BA9C11635A261001242B7 /* image3.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +60,6 @@
 		703BA98F16359AEC001242B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		703BA99116359AEC001242B7 /* HelpCarouselTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpCarouselTests.h; sourceTree = "<group>"; };
 		703BA99216359AEC001242B7 /* HelpCarouselTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpCarouselTests.m; sourceTree = "<group>"; };
-		703BA99C16359D9C001242B7 /* helpCarousel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = helpCarousel.plist; path = HelpCarouselTests/helpCarousel.plist; sourceTree = SOURCE_ROOT; };
-		703BA9BE1635A157001242B7 /* image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpeg; sourceTree = "<group>"; };
-		703BA9C01635A261001242B7 /* image2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpeg; sourceTree = "<group>"; };
-		703BA9C11635A261001242B7 /* image3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +89,6 @@
 		703BA94F16359AEC001242B7 = {
 			isa = PBXGroup;
 			children = (
-				703BA9BD1635A149001242B7 /* Images */,
 				703BA96416359AEC001242B7 /* HelpCarousel */,
 				703BA98B16359AEC001242B7 /* HelpCarouselTests */,
 				703BA95D16359AEC001242B7 /* Frameworks */,
@@ -142,7 +133,6 @@
 		703BA96516359AEC001242B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				703BA99C16359D9C001242B7 /* helpCarousel.plist */,
 				703BA96616359AEC001242B7 /* HelpCarousel-Info.plist */,
 				703BA96716359AEC001242B7 /* InfoPlist.strings */,
 				703BA96A16359AEC001242B7 /* main.m */,
@@ -171,16 +161,6 @@
 				703BA98E16359AEC001242B7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		703BA9BD1635A149001242B7 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				703BA9C01635A261001242B7 /* image2.jpeg */,
-				703BA9C11635A261001242B7 /* image3.jpeg */,
-				703BA9BE1635A157001242B7 /* image1.jpeg */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +241,6 @@
 				703BA97516359AEC001242B7 /* Default-568h@2x.png in Resources */,
 				703BA97B16359AEC001242B7 /* HCViewController_iPhone.xib in Resources */,
 				703BA97E16359AEC001242B7 /* HCViewController_iPad.xib in Resources */,
-				703BA99D16359D9C001242B7 /* helpCarousel.plist in Resources */,
-				703BA9BF1635A157001242B7 /* image1.jpeg in Resources */,
-				703BA9C21635A261001242B7 /* image2.jpeg in Resources */,
-				703BA9C31635A261001242B7 /* image3.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +462,7 @@
 				703BA99816359AEC001242B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		703BA99916359AEC001242B7 /* Build configuration list for PBXNativeTarget "HelpCarouselTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +471,7 @@
 				703BA99B16359AEC001242B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

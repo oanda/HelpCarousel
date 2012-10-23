@@ -6,8 +6,8 @@ HelpCarousel is an open source UIScrollView based fully functional carousel-styl
  
 Screenshots
 -------------------------
-![Page 1](https://github.com/znli/HelpCarousel/raw/master/Resources/page1.png)
-![Page 2](https://github.com/znli/HelpCarousel/raw/master/Resources/page2.png)
+![Page 1](https://github.com/znli/HelpCarousel/raw/master/ReadmeResources/page1.png)
+![Page 2](https://github.com/znli/HelpCarousel/raw/master/ReadmeResources/page2.png)
 
 Features
 --------------------------
