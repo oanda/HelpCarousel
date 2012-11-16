@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70362F29165685FF008D3D02 /* HCViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70362F27165685FF008D3D02 /* HCViewController_iPad.xib */; };
+		70362F2A165685FF008D3D02 /* HCViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70362F28165685FF008D3D02 /* HCViewController_iPhone.xib */; };
 		703BA95F16359AEC001242B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703BA95E16359AEC001242B7 /* UIKit.framework */; };
 		703BA96116359AEC001242B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703BA96016359AEC001242B7 /* Foundation.framework */; };
 		703BA96316359AEC001242B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703BA96216359AEC001242B7 /* CoreGraphics.framework */; };
-		703BA96916359AEC001242B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 703BA96716359AEC001242B7 /* InfoPlist.strings */; };
 		703BA96B16359AEC001242B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 703BA96A16359AEC001242B7 /* main.m */; };
 		703BA96F16359AEC001242B7 /* HCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 703BA96E16359AEC001242B7 /* HCAppDelegate.m */; };
 		703BA97116359AEC001242B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 703BA97016359AEC001242B7 /* Default.png */; };
 		703BA97316359AEC001242B7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 703BA97216359AEC001242B7 /* Default@2x.png */; };
 		703BA97516359AEC001242B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 703BA97416359AEC001242B7 /* Default-568h@2x.png */; };
 		703BA97816359AEC001242B7 /* HCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703BA97716359AEC001242B7 /* HCViewController.m */; };
-		703BA97B16359AEC001242B7 /* HCViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BA97916359AEC001242B7 /* HCViewController_iPhone.xib */; };
-		703BA97E16359AEC001242B7 /* HCViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BA97C16359AEC001242B7 /* HCViewController_iPad.xib */; };
 		703BA98616359AEC001242B7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703BA98516359AEC001242B7 /* SenTestingKit.framework */; };
 		703BA98716359AEC001242B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703BA95E16359AEC001242B7 /* UIKit.framework */; };
 		703BA98816359AEC001242B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703BA96016359AEC001242B7 /* Foundation.framework */; };
@@ -40,12 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70362F27165685FF008D3D02 /* HCViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCViewController_iPad.xib; sourceTree = "<group>"; };
+		70362F28165685FF008D3D02 /* HCViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCViewController_iPhone.xib; sourceTree = "<group>"; };
 		703BA95A16359AEC001242B7 /* HelpCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		703BA95E16359AEC001242B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		703BA96016359AEC001242B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		703BA96216359AEC001242B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		703BA96616359AEC001242B7 /* HelpCarousel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelpCarousel-Info.plist"; sourceTree = "<group>"; };
-		703BA96816359AEC001242B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		703BA96A16359AEC001242B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		703BA96C16359AEC001242B7 /* HelpCarousel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelpCarousel-Prefix.pch"; sourceTree = "<group>"; };
 		703BA96D16359AEC001242B7 /* HCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAppDelegate.h; sourceTree = "<group>"; };
@@ -55,8 +55,6 @@
 		703BA97416359AEC001242B7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		703BA97616359AEC001242B7 /* HCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCViewController.h; sourceTree = "<group>"; };
 		703BA97716359AEC001242B7 /* HCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCViewController.m; sourceTree = "<group>"; };
-		703BA97A16359AEC001242B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HCViewController_iPhone.xib; sourceTree = "<group>"; };
-		703BA97D16359AEC001242B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HCViewController_iPad.xib; sourceTree = "<group>"; };
 		703BA98416359AEC001242B7 /* HelpCarouselTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpCarouselTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		703BA98516359AEC001242B7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		703BA98D16359AEC001242B7 /* HelpCarouselTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelpCarouselTests-Info.plist"; sourceTree = "<group>"; };
@@ -125,12 +123,12 @@
 		703BA96416359AEC001242B7 /* HelpCarousel */ = {
 			isa = PBXGroup;
 			children = (
+				70362F27165685FF008D3D02 /* HCViewController_iPad.xib */,
+				70362F28165685FF008D3D02 /* HCViewController_iPhone.xib */,
 				703BA96D16359AEC001242B7 /* HCAppDelegate.h */,
 				703BA96E16359AEC001242B7 /* HCAppDelegate.m */,
 				703BA97616359AEC001242B7 /* HCViewController.h */,
 				703BA97716359AEC001242B7 /* HCViewController.m */,
-				703BA97916359AEC001242B7 /* HCViewController_iPhone.xib */,
-				703BA97C16359AEC001242B7 /* HCViewController_iPad.xib */,
 				703BA96516359AEC001242B7 /* Supporting Files */,
 			);
 			path = HelpCarousel;
@@ -141,7 +139,6 @@
 			children = (
 				706410021636FF12006A7889 /* SampleResources */,
 				703BA96616359AEC001242B7 /* HelpCarousel-Info.plist */,
-				703BA96716359AEC001242B7 /* InfoPlist.strings */,
 				703BA96A16359AEC001242B7 /* main.m */,
 				703BA96C16359AEC001242B7 /* HelpCarousel-Prefix.pch */,
 				703BA97016359AEC001242B7 /* Default.png */,
@@ -252,15 +249,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				703BA96916359AEC001242B7 /* InfoPlist.strings in Resources */,
 				703BA97116359AEC001242B7 /* Default.png in Resources */,
 				703BA97316359AEC001242B7 /* Default@2x.png in Resources */,
 				703BA97516359AEC001242B7 /* Default-568h@2x.png in Resources */,
-				703BA97B16359AEC001242B7 /* HCViewController_iPhone.xib in Resources */,
-				703BA97E16359AEC001242B7 /* HCViewController_iPad.xib in Resources */,
 				706410061636FF12006A7889 /* clickOnRatesToExpand.png in Resources */,
 				706410071636FF12006A7889 /* clickToShowLeftGutter.png in Resources */,
 				706410081636FF12006A7889 /* helpCarousel.plist in Resources */,
+				70362F29165685FF008D3D02 /* HCViewController_iPad.xib in Resources */,
+				70362F2A165685FF008D3D02 /* HCViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,30 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		703BA96716359AEC001242B7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				703BA96816359AEC001242B7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		703BA97916359AEC001242B7 /* HCViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				703BA97A16359AEC001242B7 /* en */,
-			);
-			name = HCViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		703BA97C16359AEC001242B7 /* HCViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				703BA97D16359AEC001242B7 /* en */,
-			);
-			name = HCViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
 		703BA98E16359AEC001242B7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
