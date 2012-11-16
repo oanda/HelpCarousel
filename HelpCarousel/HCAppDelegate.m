@@ -15,13 +15,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
+    // Please see README.md if you want to create an instance of HCViewController outside of this project.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[HCViewController alloc] initWithNibName:@"HCViewController_iPhone" bundle:nil];
     } else {
         self.viewController = [[HCViewController alloc] initWithNibName:@"HCViewController_iPad" bundle:nil];
     }
     self.window.rootViewController = self.viewController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -8,15 +8,17 @@
 
 #import "HCViewController.h"
 
-#define IMAGE_WIDTH_SCALE 0.69  //Image size (width), in % of view size (width)
-#define TRANSITION_SCALE 0.5    //Pan multiplier
+#define IMAGE_WIDTH_SCALE 0.70  //Image size (width), in % of view size (width)
+#define TRANSITION_SCALE 0.50   //Pan multiplier
 
 @interface HCViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate> {
+
     UIUserInterfaceIdiom currentDeviceInterface;
     NSUInteger lastPage;
-    BOOL pageControlBeingUsed;
-    int count;
     CGPoint lastScrollViewContentOffset;
+    int count;
+    BOOL pageControlBeingUsed;
+    
 }
 
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
@@ -28,7 +30,6 @@
 @property (nonatomic) NSUInteger currentPage;
 @property (nonatomic, strong) UIPanGestureRecognizer *swipeGR;
 
-
 @end
 
 @implementation HCViewController
@@ -39,19 +40,32 @@
 @synthesize currentPage = _currentPage;
 @synthesize swipeGR = _swipeGR;
 
-//////////////////////////////////////
-//      Delegate Methods
-//////////////////////////////////////
 
+#pragma mark - Initializer
+// Default initializer
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self setupNib];
+    }
+    return self;
+}
+
+#pragma mark - Delegate Methods
+
+// Allow simultaneous gesture recognition for custom gesture recognizer compatibility
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
 }
 
+// pageControl flickering fix and adds simultaneous gesture recognition
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     pageControlBeingUsed = NO;
     [self gestureRecognizer:self.swipeGR shouldRecognizeSimultaneouslyWithGestureRecognizer:[self.scrollViewPageControl.gestureRecognizers objectAtIndex:0]];
 }
 
+// Display the approporiate title and description based on scrolled to page
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
     if(self.currentPage != lastPage) {
@@ -63,6 +77,8 @@
     pageControlBeingUsed = NO;
 }
 
+// Enables custom gesture recognizer only on the last page
+// On other pages, change the scrolling of images based on the user interactions
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     float pageWidth = self.imageScrollView.frame.size.width;
     
@@ -71,9 +87,6 @@
     self.currentPage = floor((self.imageScrollView.contentOffset.x - pageWidth/2) / pageWidth) + 1;
     
     if(self.imageScrollView.contentOffset.x == (count - 1) * self.imageScrollView.bounds.size.width) {
-        //On the last page
-        if(lastScrollViewContentOffset.x < self.imageScrollView.contentOffset.x) {
-        }
         self.swipeGR.enabled = YES;
     } else {
         self.swipeGR.enabled = NO;
@@ -82,6 +95,7 @@
     lastScrollViewContentOffset = scrollView.contentOffset;
 }
 
+// Returns the last page to its proper place in case user performs improper panning
 - (void)handlePanGesture:(UIPanGestureRecognizer *)gr {
     
     if(gr.state == UIGestureRecognizerStatePossible || gr.state == UIGestureRecognizerStateFailed || gr.state == UIGestureRecognizerStateCancelled) {
@@ -133,19 +147,22 @@
                              } completion:^(BOOL finished) {
                              }];
         }
-        
     }
-    
 }
 
 
-- (NSArray *)contentArray {
-    if(!_contentArray) {
-        _contentArray = [[NSArray alloc] initWithContentsOfFile:self.imagePlistFilePath];
-    }
-    
-    return _contentArray;
+#pragma mark - Help Methods
+
+- (IBAction)changePage {
+    // update the scroll view to the appropriate page
+    CGRect frame;
+    frame.origin.x = self.imageScrollView.frame.size.width * self.scrollViewPageControl.currentPage;
+    frame.origin.y = 0;
+    frame.size = self.imageScrollView.frame.size;
+    [self.imageScrollView scrollRectToVisible:frame animated:YES];
+    pageControlBeingUsed = YES;
 }
+
 
 - (void)setupNib {
     currentDeviceInterface = [[UIDevice currentDevice] userInterfaceIdiom];
@@ -156,6 +173,18 @@
     self.swipeGR.delegate = self;
 }
 
+
+// Holds the contents of HelpCarousel.plist
+- (NSArray *)contentArray {
+    if(!_contentArray) {
+        _contentArray = [[NSArray alloc] initWithContentsOfFile:self.imagePlistFilePath];
+    }
+    
+    return _contentArray;
+}
+
+
+// Retrieves image names form HelpCarousel.plist file and adds the images to the UIScrollView
 - (void)addImagesFromPlistToScrollView {
     count = [self.contentArray count];
     float windowWidth = self.imageScrollView.bounds.size.width;
@@ -196,30 +225,7 @@
 }
 
 
-//////////////////////////////////////
-//      UIPageControll Action
-//////////////////////////////////////
-- (IBAction)changePage {
-    // update the scroll view to the appropriate page
-    CGRect frame;
-    frame.origin.x = self.imageScrollView.frame.size.width * self.scrollViewPageControl.currentPage;
-    frame.origin.y = 0;
-    frame.size = self.imageScrollView.frame.size;
-    [self.imageScrollView scrollRectToVisible:frame animated:YES];
-    pageControlBeingUsed = YES;
-}
-
-//////////////////////////////////////
-//              MISC
-//////////////////////////////////////
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+#pragma mark - View Cycle
 
 - (void)viewDidLoad
 {
@@ -240,10 +246,11 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    if(currentDeviceInterface == UIUserInterfaceIdiomPhone) {
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         return NO;
+    } else {
+        return YES;
     }
-    return YES;
 }
 
 @end
